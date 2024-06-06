@@ -1,0 +1,46 @@
+.sermons{
+    margin-block: 50px;
+}
+/* .sermonsWrapper {
+    display: flex;
+    padding-inline: 6rem;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+  } */
+  .sermonsWrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 196.88px);
+    gap: 20px;
+    place-content: center;
+  }
+  .sermonsWrapper .liveVideo{
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  .sermonsWrapper .recentVideo1{
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .sermonsWrapper .recentVideo2{
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .sermonsBtn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-inline: auto;
+    font-size: 18px;
+    background-color: #FF0000;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+  }
+  .sermonsBtn:hover {
+    padding-inline: 30px;
+  }
