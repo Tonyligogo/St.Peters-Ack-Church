@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [active, setActive] = useState(false);
+  const[ministries, setMinistries] = useState(false);
 
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false);
@@ -28,11 +29,18 @@ function Navbar() {
         </Link>
         <div className="links">
           <ul className="navLinks">
-            <li>Home</li>
+            <li> <Link to='/'>Home</Link></li>
             <li>About</li>
-            <li>Ministries</li>
+            <li className={`ministries ${ministries ? 'selected' : ''}`} onClick={()=>setMinistries(prev=>!prev)}>Ministries
+              <ul className="ministriesWrapper">
+                <li> <Link to='/ministries/youth-ministry'>Youth Ministry</Link></li>
+                <li>Children Ministry</li>
+                <li>Men&apos;s Ministry</li>
+                <li>Women&apos;s Ministry</li>
+              </ul>
+            </li>
             <li>Activities</li>
-            <li>Get Involved</li>
+            <li> <Link to='get-involved'> Get Involved</Link></li>
             <li>Welfare</li>
             <li>Contact Us</li>
           </ul>

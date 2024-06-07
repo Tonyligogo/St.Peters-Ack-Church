@@ -1,0 +1,113 @@
+.getInvolvedContainer{
+    min-height: 100dvh;
+    height: 100dvh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.getInvolvedOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -5;
+}
+.bgImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(circle at center bottom, #194185 0%,#121926 65%);
+    z-index: -10;
+}
+.getInvRow{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80dvh;
+    align-items: center;
+    gap: 20px;
+    margin-inline: 6rem;
+}
+.getInvRow .rowImage{
+    height: 100%;
+    /* background-image: url('https://images.pexels.com/photos/5710976/pexels-photo-5710976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
+    background-image: url('https://images.pexels.com/photos/7520371/pexels-photo-7520371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.getInvolvedContainer .getInvRow .getInvolvedContent {
+    color: white;
+}
+.getInvolvedContainer .getInvRow .getInvolvedContent p{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+.getInvolvedContent p span{
+    color: #1570ef;
+}
+.getInvolvedContainer .getInvRow .getInvolvedContent small{
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 700;
+}
+/* Get involved main content */
+.getInvolvedMain{
+    margin: 100px 20px;
+}
+.getInvolvedMain .getInvolvedMainTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 100px;
+    gap: 2rem;
+}
+.getInvolvedMain .getInvolvedMainTop > *{
+    flex: 1;
+}
+.getInvolvedMain .getInvolvedMainTop > div:first-child span{
+    font-size: 16px;
+    color: rgb(72, 72, 72);
+    font-weight: 600;
+}
+.getInvolvedMain .getInvolvedMainTop p{
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(72, 72, 72);
+}
+.getInvolvedMain .getInvolvedMainBottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 80vh;
+    gap: 30px;
+}
+.getInvolvedMainBottom .getInvolvedMainCard .imgOverlay{
+    /* background-image: url('https://images.pexels.com/photos/6860844/pexels-photo-6860844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
+    background-image: linear-gradient(180deg, rgba(13,18,28,0.05) 47%,rgba(13,18,28,0.84) 77%),url('https://images.pexels.com/photos/6860844/pexels-photo-6860844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+}
+.getInvolvedMainCard{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.getInvolvedMainCard .imgContent{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 20px;
+}
