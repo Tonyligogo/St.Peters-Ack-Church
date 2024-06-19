@@ -1,0 +1,25 @@
+.ministriesSection{
+    background-color: #f8f9fa;
+    padding-block: 50px;
+
+}
+.ministriesTypes{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-auto-rows: auto;
+    justify-content: center;
+    gap: 30px;
+    row-gap: 80px;
+}
+.ministriesTypes div img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+}
+.ministriesTypes div div a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

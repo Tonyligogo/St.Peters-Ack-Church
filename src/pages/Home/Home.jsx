@@ -7,6 +7,8 @@ import Reveal from "../../utils/Reveal";
 import Events from "../../components/Events/Events";
 import Announcements from "../../components/Announcements/Announcements";
 import Sermons from "../../components/Sermons/Sermons";
+import Blog from "../../components/Blog/Blog";
+import Ministries from "../../components/Ministries/Ministries";
 
 function Home() {
 
@@ -57,10 +59,16 @@ function Home() {
           <Events />
       </Reveal>
       <Reveal>
+          <Ministries />
+      </Reveal>
+      <Reveal>
           <Announcements />
       </Reveal>
       <Reveal>
           <Sermons />
+      </Reveal>
+      <Reveal>
+          <Blog />
       </Reveal>
       <Reveal>
         <div className="contact">

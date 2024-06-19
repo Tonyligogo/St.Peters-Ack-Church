@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import EventsPage from "./pages/AllEvents/AllEvents";
 import YouthPage from "./pages/Ministries/Youth/Youth";
+import ChildrenMinistryPage from "./pages/Ministries/Children/Children ";
 import GetInvolved from "./pages/GetInvolved/GetInvolved";
 
 function App() {
@@ -40,6 +41,10 @@ function App() {
               {
                 path: "/ministries/youth-ministry",
                 element: <YouthPage />,
+              },
+              {
+                path: "/ministries/children-ministry",
+                element: <ChildrenMinistryPage />,
               },
             ]
           },

@@ -22,7 +22,9 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: radial-gradient(circle at center bottom, #194185 0%,#121926 65%);
+    /* background-image: radial-gradient(circle at center bottom, #194185 0%,#121926 65%); */
+    background: linear-gradient(90deg, #0072ff 0%, #00d4ff 100%);
+
     z-index: -10;
 }
 .getInvRow{

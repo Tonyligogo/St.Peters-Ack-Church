@@ -36,11 +36,16 @@
   .navLinks {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
   }
   .navLinks li {
     text-decoration: none;
     list-style: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+  .navLinks li:hover {
+    background-color: rgba(238,242,246,0.3);
   }
   nav h3 {
     margin: 0;
