@@ -1,75 +1,79 @@
 import "./Home.css";
 import BgImage from "../../assets/church1.jpg";
-import Bg2 from "../../assets/pexels-pixabay-372326.jpg";
+import Bg2 from "../../assets/altar.jpg";
 import Bg3 from "../../assets/church3.jpg";
-import vicarImage from "../../assets/priest.jpg";
+import vicarImage from "../../assets/ven.jpg";
 import Reveal from "../../utils/Reveal";
-import Events from "../../components/Events/Events";
 import Announcements from "../../components/Announcements/Announcements";
 import Sermons from "../../components/Sermons/Sermons";
-import Blog from "../../components/Blog/Blog";
-import Ministries from "../../components/Ministries/Ministries";
+import Events from "../../components/Events/Events";
+import Services from "../../components/Services/Services";
 
 function Home() {
-
   return (
     <main>
       <div className="background">
         <div className="overlay"></div>
-            <img src={BgImage} alt="background" className="bgImage" />
-            <img src={Bg2} alt="background" className="bgImage" />
-            <img src={Bg3} alt="background" className="bgImage" />
+        <img src={BgImage} alt="background" className="bgImage" />
+        <img src={Bg2} alt="background" className="bgImage" />
+        <img src={Bg3} alt="background" className="bgImage" />
         <div className="content">
           <p className="text">
             <span className="whiteLine"></span>
-            <span className="textPrimary">
-              Theme of the Year 2024
-            </span>
+            <span className="textPrimary">Theme of the Year 2024</span>
             <span className="whiteLine"></span>
           </p>
           <p className="themeText">
-            The year of open doors and divine speed
+            <b>The year of open doors and divine speed</b>
           </p>
-          <p className="bannerText"> ❝ He who is holy, He who is true, He who has the key, He who opens & no one shuts, shuts and no one opens, I have set before you an open door & no one can shut it. ❞ </p>
+          {/* <p className="bannerText">
+            {" "}
+            ❝ He who is holy, He who is true, He who has the key,
+            <br /> He who opens & no one shuts, shuts and no one opens,
+            <br /> I have set before you an open door & no one can shut it. ❞{" "}
+          </p> */}
           {/* <button className="btn">Be part of us</button> */}
         </div>
       </div>
       <Reveal>
         <div className="midSection">
           <div className="weekQuote">
-            {<img src={vicarImage} alt="Bible" className="bgBible" />}
+            <div>
+              {<img src={vicarImage} alt="Bible" className="bgBible" />}
+              {/* <p className="vicarsName">Ven. Canon Gilbert Odhiambo</p> */}
+            </div>
             <div className="quoteText">
-            <p className="text">
-            <span className="darkLine"></span>
-            <span className="heading">
-            Quote of the week
-            </span>
-            <span className="darkLine"></span>
-          </p>
+              <p className="text">
+                <span className="darkLine"></span>
+                <span className="heading">Quote of the week</span>
+                <span className="darkLine"></span>
+              </p>
               {/* <h3>Quote of the week</h3> */}
-              <p>
-                ❝ Do the right thing, at the right place, at the right time, and
-                your future will be free from regrets ❞
+              <p className="Quote">
+                ❝Doing the right thing, at the right place, and at the right
+                time ensures a future free from regrets. It's about more than
+                just making ethical choices—it's understanding how context and
+                timing shape outcomes.❞
               </p>
             </div>
           </div>
         </div>
       </Reveal>
+
       <Reveal>
-          <Events />
+        <Services />
       </Reveal>
       <Reveal>
-          <Ministries />
+        <Sermons />
       </Reveal>
       <Reveal>
-          <Announcements />
+        <Events />
       </Reveal>
+
       <Reveal>
-          <Sermons />
+        <Announcements />
       </Reveal>
-      <Reveal>
-          <Blog />
-      </Reveal>
+
       <Reveal>
         <div className="contact">
           <h1>Do you need Counselling, Prayer...</h1>
@@ -86,12 +90,17 @@ function Home() {
             </span>
             <span>
               Get us on Facebook at:{" "}
-              <a href="https://web.facebook.com/stpetersembakasi/" target="_blank" rel="noreferrer" style={{textDecoration:'none'}}>
-              <small
-                style={{ color: "blue", fontSize: "16px", cursor: "pointer" }}
+              <a
+                href="https://web.facebook.com/stpetersembakasi/"
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: "none" }}
               >
-                web.facebook.com/stpetersembakasi
-              </small>
+                <small
+                  style={{ color: "blue", fontSize: "16px", cursor: "pointer" }}
+                >
+                  web.facebook.com/stpetersembakasi
+                </small>
               </a>
             </span>
           </p>
