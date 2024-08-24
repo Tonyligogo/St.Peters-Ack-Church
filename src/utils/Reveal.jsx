@@ -1,6 +1,7 @@
 import { motion, useInView, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
+// test 
 
 Reveal.propTypes = {
   children: PropTypes.node
