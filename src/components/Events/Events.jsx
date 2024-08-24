@@ -1,39 +1,35 @@
 import "./Events.css";
 import { FaRegCalendarAlt } from "react-icons/fa";
 
-import Motivate from "../../assets/motivate.jpg";
+import image3 from "../../assets/youthMin.jpg";
 import { MdLocationCity } from "react-icons/md";
-import Inspire from "../../assets/inspire.jpg";
+import image1 from "../../assets/PrayerWatch.jpg";
 import { Link } from "react-router-dom";
+import image2 from "../../assets/worshipTeam.jpg";
 
 const Events = () => {
   const events = [
     {
       id: 1,
-      imgSrc: Inspire,
-      title: "Know Jesus Christ Better Through Bible Study",
-      date: "Friday, 6:00 Pm",
+      imgSrc: image1,
+      title: "Prayer Watch Embakasi Edition",
+      date: "7th July, 2024 ",
       location: "ACK St.Peter's Embakasi",
     },
     {
       id: 2,
-      imgSrc: Motivate,
-      title: "Join Us For Community Evangelism",
-      date: "Sunday, 2:00 Pm - 8:00 Pm",
+      imgSrc: image2,
+      title: "Join Us For Celebration Sunday",
+      date: "28th July, 2024 ",
+      time: "8:00 am - 9:30 am",
       location: "ACK St.Peter's Embakasi",
     },
+
     {
       id: 3,
-      imgSrc: Inspire,
+      imgSrc: image3,
       title: "Know Jesus Christ Better Through Bible Study",
-      date: "Friday, 6:00 Pm",
-      location: "ACK St.Peter's Embakasi",
-    },
-    {
-      id: 4,
-      imgSrc: Inspire,
-      title: "Know Jesus Christ Better Through Bible Study",
-      date: "Friday, 6:00 Pm",
+      date: "Friday, 6:00 pm",
       location: "ACK St.Peter's Embakasi",
     },
   ];
@@ -53,16 +49,25 @@ const Events = () => {
       <div className="eventsWrapper">
         {displayedEvents.map((event) => (
           <Link key={event.id} to="/events" className="eventLink">
-            <div className="eventWrapperOverlay"></div>
-            <div>
+            <div className="eventsCard">
+              <div className="eventWrapperOverlay"></div>
               <img src={event.imgSrc} alt="event" className="eventPic" />
               <div className="eventContent">
+                <div className="eventDetails">
+                  <span>
+                    <FaRegCalendarAlt />
+                    {event.date}
+                  </span>
+                  <span>
+                    {" "}
+                    <MdLocationCity />
+                    {event.location}
+                  </span>
+                </div>
                 <h2>{event.title}</h2>
-                <span><FaRegCalendarAlt />{event.date}</span>
-                <span> <MdLocationCity />{event.location}</span>
               </div>
             </div>
-            </Link> 
+          </Link>
         ))}
       </div>
     </div>

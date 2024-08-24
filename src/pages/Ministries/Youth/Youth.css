@@ -1,91 +1,179 @@
-.youthBg{
-    height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.youthBg {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-.slider{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
+.slider {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
 }
-.slides{
-    height: 100vh;   
-    width: 500%;
-    display: flex;
+.slides {
+  height: 100vh;
+  width: 500%;
+  display: flex;
 }
-.slides .slide{
-    height: 100%;
-    width: 20%;
-    transition: 2s;
-    position: relative;
+.slides .slide {
+  height: 100%;
+  width: 20%;
+  transition: 2s;
+  position: relative;
 }
-.slides input{
-    display: none;
+.slides input {
+  display: none;
 }
 /* css for manual slider */
-.navigation-manual{
-    position: absolute;
-    width: 100%;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-    overflow-x: hidden;
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
 }
-.manual-btn{
-    border: 2px solid transparent;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
+.manual-btn {
+  border: 2px solid transparent;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
 }
-.manual-btn:not(:last-child){
-    margin-right: 20px;
+.manual-btn:not(:last-child) {
+  margin-right: 20px;
 }
 
-#radio1:checked ~ .first{
-    margin-left: 0;
+#radio1:checked ~ .first {
+  margin-left: 0;
 }
-#radio2:checked ~ .first{
-    margin-left: -20%;
+#radio2:checked ~ .first {
+  margin-left: -20%;
 }
-#radio3:checked ~ .first{
-    margin-left: -40%;
+#radio3:checked ~ .first {
+  margin-left: -40%;
 }
-#radio4:checked ~ .first{
-    margin-left: -60%;
+#radio4:checked ~ .first {
+  margin-left: -60%;
 }
 /* css for auto navigation */
-.navigation-auto{
-    position: absolute;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    bottom: 32px;
-    transform: translateY(50%);
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  bottom: 32px;
+  transform: translateY(50%);
 }
-.navigation-auto div{
-    border: 2px solid transparent;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
+.navigation-auto div {
+  border: 2px solid transparent;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
 }
-.navigation-auto div:not(:last-child){
-    margin-right: 20px;
+.navigation-auto div:not(:last-child) {
+  margin-right: 20px;
 }
-.video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-.videoOverlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.youthInfo {
+  padding: 40px;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: medium;
+}
+.youthPic {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url("../../../assets/YouthMinistry6.jpg") fixed center top -80px;
+  background-size: cover;
+  padding-block: 100px;
+  color: white;
+  height: 70vh;
+}
+
+.servicesWrapper {
+  margin: auto;
+  margin-inline: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 16px;
+}
+.card {
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 1rem;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  /* height: 500px; */
+}
+/* Hover effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card:hover .serviceContent {
+  color: #333;
+}
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* position: absolute; */
+  bottom: 10px;
+  padding-inline: 1rem;
+
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-align: justify; /* Left align for better readability */
+}
+.serviceContent span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* color: grey; */
+  /* font-style: italic; */
+}
+.servicesWrapper .card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Adding a hover effect to the description */
+
+.card h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #333;
+  /* margin: 0.5rem auto 0; */
+  transition: width 0.3s;
+}
+
+.card:hover h2::after {
+  background-color: #333;
+  width: 140px; /* Increase this width on hover */
+}
+.youthActivities h3 {
+  padding-left: 10px;
+  text-align: center;
 }

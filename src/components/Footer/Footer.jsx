@@ -12,10 +12,10 @@ function Footer() {
     <footer>
       <section>
         <div>
-          <h2>ACK Church</h2>
+          <h2>A.C.K St. Peters Embakasi Church</h2>
           <p className="footerDesc">
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts.
+            Join us as we journey together in faith, hope, and love, making a
+            positive impact in the lives of those around us.
           </p>
           <ul className="socialLinks">
             <li className="social">
@@ -41,7 +41,8 @@ function Footer() {
             </li>
             <li>
               {" "}
-              <MdOutlineLocationOn /> <span>Embakasi Near Embakasi Post Office, Embakasi, Kenya</span>
+              <MdOutlineLocationOn />{" "}
+              <span>Embakasi Near Embakasi Post Office, Embakasi, Kenya</span>
             </li>
             <li>
               {" "}
@@ -53,12 +54,12 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        {/* <div>
           <h2>Service Hours</h2>
           <ul className="list serviceHours">
             <li>
-              <span>Wednesday Prayer Meeting</span>
-              <small>10:00 am to 11:30 am</small>
+              <span>Friday Service</span>
+              <small>6:00 pm to 8:00 pm</small>
             </li>
             <li>
               <span>Youth Service</span>
@@ -73,7 +74,7 @@ function Footer() {
               <small>11:30 am to 1:30 pm</small>
             </li>
           </ul>
-        </div>
+        </div> */}
       </section>
       <div>
         <p className="footer">

@@ -1,0 +1,80 @@
+.container {
+  margin-block: 60px;
+}
+.servicePic {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+.servicesWrapper {
+  margin: auto;
+  margin-inline: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 16px;
+}
+.card {
+  /* border: 1px solid black; /* Combined border width and color  */
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 1rem;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  height: 500px;
+}
+/* Hover effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card:hover .serviceContent {
+  color: #333;
+}
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* position: absolute; */
+  bottom: 10px;
+  padding-inline: 1rem;
+
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-align: justify; /* Left align for better readability */
+}
+.serviceContent span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* color: grey; */
+  /* font-style: italic; */
+}
+.servicesWrapper .card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Adding a hover effect to the description */
+
+.card h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #333;
+  /* margin: 0.5rem auto 0; */
+  transition: width 0.3s;
+}
+
+.card:hover h2::after {
+  background-color: #333;
+  width: 140px; /* Increase this width on hover */
+}
